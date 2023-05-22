@@ -76,7 +76,7 @@ void rent::check()
 void rent :: id()
 {
     cout<<"\t\t\tLogIn Or Sign Up\t\t\t"<<endl;
-    cout<<"\t\tPress 1 for Sing up or Press 1 for login "<<endl;
+    cout<<"\t\tPress 1 for Sing up or Press 2 for login "<<endl;
     int choice;
     cin>>choice;
     switch (choice)
@@ -227,13 +227,5 @@ void rent::invoiceRecord(){
 	
 }
 
-int main()
-{
-   rent a;
-   a.welcome();
-   a.id();
-   a.data();
-   a.invoiceAmount();
-   a.invoiceRecord();
-}
+
 

@@ -1,7 +1,13 @@
 #include<iostream>
+#include "rent.cpp"
 
 using namespace std;
 int main()
 {
-    cout<<"Test run"<<endl;
+   rent a;
+   a.welcome();
+   a.id();
+   a.data();
+   a.invoiceAmount();
+   a.invoiceRecord();
 }
