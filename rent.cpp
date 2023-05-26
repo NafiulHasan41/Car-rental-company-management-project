@@ -21,7 +21,7 @@ class rent:public login{
 		void data();
 		void invoiceAmount();	//Computes 
 		void invoiceRecord();  //Prints the invoice 
-
+		void thankyou();
 };
 rent::rent()
 {
@@ -33,6 +33,7 @@ rent::rent()
 }
 void rent::welcome()
 {
+	system("clear");
     ifstream inputfile("welcome.txt"); //displaying welcome ASCII image text on output screen fn1353
 	if(!inputfile) {
 		cout << "Cannot open input file.\n";
@@ -93,7 +94,7 @@ void rent :: id()
             setid_and_password(a,b);
             system("clear");
 
-            check();
+            id();
             break;
            }
         case 2:
@@ -107,11 +108,11 @@ void rent:: data()
 {
     if(flag)
     {
-        cout << "\n\n\n\tPlease Enter your Name: "; 	//taking data from the user
+		system("clear");
+		cout<<"\t\t\nWELCOME!!! YOU ARE LOGGED IN "<<endl;
+        cout << "\n\n\nPlease Enter your Name: "; 	//taking data from the user
   	cin >> cutomer_name;
 	cout<<endl;
-    cout<<"Number of days you wish to rent the car : ";
-	cin >> nuber_of_days;
     int car_model;
 	do{
 		//giving user a choice to select among three different models
@@ -131,6 +132,8 @@ void rent:: data()
        
 	    cin >> car_model;
 	    cout << endl;
+		 cout<<"Number of days you wish to rent the car : ";
+	    cin >> nuber_of_days;
         		
 	 	switch(car_model){
 	 		case 1:
@@ -211,8 +214,13 @@ void rent::invoiceRecord(){
 	cout << "\t\t	Otherwise penelty fee will be applied"<<endl;
 	cout << "\t\t	***********************************************************" << endl;
 
-	system("PAUSE");
-	//system ("clear");
+
+	
+}
+void rent::thankyou() // To show the last part of the project
+{
+    	system("PAUSE");
+	system ("clear");
         ifstream inputfile("thanku.txt"); //displaying welcome ASCII image text on output screen fn1353
 	if(!inputfile) {
 		cout << "Cannot open input file.\n";
@@ -224,7 +232,6 @@ void rent::invoiceRecord(){
 			cout << str << endl;
   	}
   	inputfile.close();
-	
 }
 
 
