@@ -233,7 +233,11 @@ void rent::invoiceRecord(){
       cin>>c;
 	  if(c=="YES" || c=="yes")
 	  {
-		creation();
+		system("clear");
+		id();
+        data();
+        invoiceAmount();
+        invoiceRecord(); 
 	  }
 	  else
 	  {
