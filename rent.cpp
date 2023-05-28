@@ -22,6 +22,7 @@ class rent:public login{
 		void invoiceAmount();	//Computes 
 		void invoiceRecord();  //Prints the invoice 
 		void thankyou();
+		void creation();
 };
 rent::rent()
 {
@@ -69,7 +70,20 @@ void rent::check()
                 cout<<"\t\tTHE ID AND PASSWORD IS INVALLID"<<endl;
                 // LOOP FOR ID AND PASSWORD UNTIL CORRECT ID IS NOT FOUND
                 while(flag!=1)
-                  check();
+				{
+					int a;
+					cout<<"\t\tDO YOU WANT TO LOGIN(press 1) OR SIGN UP(press 2)"<<endl;
+					cin>>a;
+                   if(a==1)
+				   {
+                      check();
+				   }
+				   else
+				   {
+					id();
+				   }
+                    
+				}
                
             }
 }
@@ -214,6 +228,20 @@ void rent::invoiceRecord(){
 	cout << "\t\t	Otherwise penelty fee will be applied"<<endl;
 	cout << "\t\t	***********************************************************" << endl;
 
+      string c;
+      cout<<"\t\t\t\n\nDO YOU WANT TO CONTINUE ??????\n\t\t\tYES   OR   NO\n"<<endl;
+      cin>>c;
+	  if(c=="YES" || c=="yes")
+	  {
+		creation();
+	  }
+	  else
+	  {
+		thankyou();
+	  }
+
+
+
 
 	
 }
@@ -232,6 +260,16 @@ void rent::thankyou() // To show the last part of the project
 			cout << str << endl;
   	}
   	inputfile.close();
+}
+void rent::creation()
+{
+	
+     welcome();
+    id();
+    data();
+    invoiceAmount();
+    invoiceRecord();
+
 }
 
 
